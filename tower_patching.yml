@@ -19,18 +19,6 @@
     # For nodes in tower group:
     #   Pull node out of Load Balancer so no new requests come into API or UI
 
-#    - name: Grab instance data for {{ inventory_hostname }}
-#      uri:
-#        url: "{{ tower_instances_url }}"
-#        method: GET
-#      register: tower_instance
-#      delegate_to: localhost
-#      connection: local
-
-#    - name: Set inventory id
-#      set_fact:
-#        tower_host_id: "{{ tower_instance.json.results.0.id }}"
-
     - name: Disable node {{ inventory_hostname }}
       uri:
         url: "{{ tower_instance_id_url }}"

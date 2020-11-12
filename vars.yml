@@ -1,6 +1,4 @@
 tower_url: https://tower.lotaris.org:8443/api/v2
-#tower_instances_url: "{{ tower_url }}/instances/?hostname={{ inventory_hostname }}"
-#tower_instance_id_url: "{{ tower_url }}/instances/{{ tower_host_id }}/"
 tower_instance_id_url: "{{ tower_url }}/instances/{{ inventory_hostname }}/"
 
 tower_user: !vault |
